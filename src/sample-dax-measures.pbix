@@ -1,0 +1,19 @@
+
+### src/sample-dax-measures.pbix
+*(This is a placeholder. In a real repo, upload a Power BI file. For now, here's a text representation of sample DAX code you can include in a .pbix file or as a .txt.)*
+
+```dax
+// Sample DAX Measure: Revenue per Flight
+RevenuePerFlight = 
+    DIVIDE(
+        SUM(Sales[Revenue]),
+        SUM(Flights[FlightHours])
+    )
+
+// Creative KPI: Sales Altitude (Gamified Meter)
+SalesAltitude = 
+    IF(
+        [RevenuePerFlight] > 5000,
+        "Cruising High",
+        "Climbing"
+    )
